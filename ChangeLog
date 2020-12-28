@@ -1,0 +1,69 @@
+2004-07-02 Gabriele Giorgetti <gabriele_giorgetti@tin.it>
+
+    * Version 0.4.1 released.
+    * pythermalzone.py is now checking for every dir in the
+      /proc/acpi/thermal_zone/ directory. If the temperature
+      file is found, then its value is read.
+      This should fix a bug that prevented cpuspeedy to get
+      the cpu's temperature in those systems where the path
+      to the temperature file is not /proc/acpi/thermal_zone/THRM
+      Thanks to Nathaniel McCallum <npmccallum@gentoo.org>.
+    
+
+2004-05-23 Gabriele Giorgetti <gabriele_giorgetti@tin.it>
+
+    * Version 0.4.0 released.
+    * It is now possible to specify to cpuspeedy a specific frequency value
+      to be set. The numeric value must be expressed in KHz, MHz or Ghz.
+    * A function to convert speed from GHz,MHz to KHz was added.
+    * The code was checked with "pychecker" for common bugs
+
+2004-05-18 Gabriele Giorgetti <gabriele_giorgetti@tin.it>
+
+    * An option (--freqs) to display available CPU frequencies was added.
+    * A check was added to verify the availability of the userspace governor 
+      in the pycpufreq sysfs interface.    
+
+2004-05-11 Gabriele Giorgetti <gabriele_giorgetti@tin.it>
+
+    * The "--dump" option is now working again (a couple of bug were fixed)
+    * pythermalzone.py module was added.  
+
+2004-04-18 Gabriele Giorgetti <gabriele_giorgetti@tin.it>
+
+    * Version 0.3.0 released.
+    * cpuspeedy.py has been splitted in several .py modules that are installed 
+      in the $PREFIX/lib/cpuspeedy directory.
+    * A bug with the definition of the error exceptions classes is now fixed.
+    * A man page was added.
+
+2004-04-11 Gabriele Giorgetti <gabriele_giorgetti@tin.it>
+
+    * Makefile was added. It replaces the old install.sh install script
+    * Various make targets were written: install distgz deb etc..
+    * It is now possible to pass to make specific directories for cpuspeedy
+      to be installed in: eg. make PREFIX=/usr MANDIR=/usr/share/man install
+
+2004-03-29 Gabriele Giorgetti <gabriele_giorgetti@tin.it>
+
+    * Version 0.2.1 released.
+    * A typo was fixed. Thanks to Daniel Black <dragonheart@gentoo.org> and 
+      William Maddler <maddler@maddler.net> for pointing this out.
+    * A help message displayed on INTERFACE_INVALID or INTERFACE_NONE error
+      was added.
+    * Error exit codes were added.
+      
+2004-03-22 Gabriele Giorgetti <gabriele_giorgetti@tin.it>
+    
+    * Version 0.2 released.
+    * An option to print the CPU speed and temperature was added.
+    * Some modifications to make cpuspeedy work with the soon to be released 
+      GTK+ frontend that were made.
+
+2004-03-17 Gabriele Giorgetti <gabriele_giorgetti@tin.it>
+
+    * Version 0.1.1 released. Minor bugfixes.	
+
+2004-03-16 Gabriele Giorgetti <gabriele_giorgetti@tin.it>
+
+    * Version 0.1 released. Initial release.
